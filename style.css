@@ -1,0 +1,41 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (min-width: 756px) {
+    .bg_image {
+        background: url('images/bg-pattern-desktop.svg');
+        background-position: bottom left;
+    }
+
+    .mobile_img, .header-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 755px) {
+    .pc_img, .header-pc {
+        display: none;
+    }
+
+    .bg_image {
+        background: linear-gradient(135deg, white, #fff5f5);
+    }
+}
+
+.btn:hover {
+    background: hsl(0, 80%, 86%);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ce9797;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ce9797;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ce9797;
+}
