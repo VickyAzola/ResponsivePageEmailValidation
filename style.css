@@ -2,32 +2,26 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.bg_image {
+    background: linear-gradient(135deg, white, #fff5f5);
+}
+
+aside {
+    background-image: url('images/hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media (min-width: 800px) {
     .bg_image {
         background: url('images/bg-pattern-desktop.svg');
         background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-}
-
-@media (max-width: 800px) {
-    .bg_image {
-        background: linear-gradient(135deg, white, #fff5f5);
+    aside {
+        background-image: url('images/hero-desktop.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-}
-
-.btn:hover {
-    background: hsl(0, 80%, 86%);
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #ce9797;
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #ce9797;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #ce9797;
 }

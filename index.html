@@ -18,15 +18,13 @@
 <body class="min-h-screen lg:grid lg:grid-cols-10 bg_image">
   
   <header class="lg:col-start-2 bg-white md:bg-transparent p-8 lg:p-0">
-    <img class="lg:absolute w-28 lg:w-40 lg:mt-8" src="images/logo.svg" alt=""/>
+    <img class="lg:absolute w-28 lg:w-40 lg:my-8" src="images/logo.svg" alt=""/>
   </header>
 
-  <aside class="lg:order-last lg:col-start-7 lg:col-span-4">
-    <img class="block md:max-w-2xl md:mx-auto lg:hidden w-screen" src="images/hero-mobile.jpg" alt="women"/>
-    <img class="hidden lg:block min-h-screen w-full" src="images/hero-desktop.jpg" alt="women"/>
+  <aside class="lg:order-last lg:col-start-7 lg:col-span-4 h-60 md:h-[25rem] lg:min-h-screen w-full md:max-w-xl md:mx-auto lg:min-w-full">
   </aside>
 
-  <main class=" lg:col-start-2 lg:col-span-4 lg:place-content-center md:max-w-2xl md:mx-auto">
+  <main class=" lg:col-start-2 lg:col-span-4 lg:place-content-center max-w-lg md:max-w-xl mx-auto">
     <section class="text-center mt-12 mx-8 lg:text-left lg:mx-0">
       <h1 class="font-light text-4xl lg:text-6xl tracking-[.5rem] lg:tracking-[.7rem] text-[#ce9797] flex flex-col">
         WE'RE
@@ -40,22 +38,36 @@
       </p> 
     </section>
 
-    <form id="emailForm" name="submit" onsubmit="validForm(event)" required
+    <form id="emailForm" name="submit" onsubmit="return validForm(event)" required
     class="relative mx-8 lg:mx-0 mt-8 border border-[#ce9797] rounded-full text-[#ce9797] text-sm lg:max-w-md">
       <label for="email"></label>
-      <img id="iconoError" class="hidden absolute bottom-2.5 right-[4rem]" src="images/icon-error.svg" alt="Your email is not valid"/>
-      <input  type="email" id="email" name="email" placeholder="Email Address"
-        class="outline-transparent bg-transparent border-transparent py-2 my-1 rounded-full ml-1 pl-6 w-[77%]"/>
-        <button id="submit-btn" type="submit" aria-label="submit"
-        class="btn bg-gradient-to-br from-[#f8bfbf] to-[#ee8c8c] absolute flex items-center justify-center
-        bottom-0 right-[-.5rem] w-[4rem] h-[2.9rem] rounded-3xl shadow-lg shadow-[#f8bfbf] ">
-          <img class="w-2.5 font-bold" src="images/icon-arrow.svg" alt=""/></button>
+      <img 
+        id="iconoError" 
+        class="hidden absolute bottom-2.5 right-[4rem]" 
+        src="images/icon-error.svg" 
+        alt="Your email is not valid"
+      />
+      <input  
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Email Address"
+        class="placeholder-[#ce9797] outline-transparent bg-transparent border-transparent py-2 my-1 rounded-full ml-1 pl-6"
+      />
+      <button 
+        id="submit-btn" 
+        type="submit" 
+        aria-label="submit"
+        class="bg-gradient-to-br from-[#f8bfbf] to-[#ee8c8c] absolute flex items-center justify-center
+        bottom-0 right-[-.1rem] w-[4.5rem] h-[3rem] rounded-full shadow-lg shadow-[#f8bfbf] hover:from-[#f8bfbf] hover:to-[#f8bfbf]">
+        <img class="w-2.5 font-bold" src="images/icon-arrow.svg" alt=""/>
+      </button>
     </form>
-      <div class="mx-12 mt-3">
-        <p id="errorMessage" class="text-[#f96262]"></p>
+      <div class="mx-12 mt-3 lg:mx-0">
+        <p id="errorMessage" class="text-[#f96262] invisible">Please provide a valid email</p>
       </div>
     
-      <footer class="mt-14 py-2 text-center lg:text-left lg:col-start-2">
+      <footer class="py-2 text-center lg:col-start-2 lg:absolute lg:bottom-0">
         <p class="text-xs text-[#ce9797]">
           Challenge by <a class="hover:text-[#413a3a]" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
           Coded by <a class="hover:text-[#413a3a]" href="https://github.com/VickyAzola/ResponsivePageEmailValidation" target="_blank">Victoria Azola</a>.
