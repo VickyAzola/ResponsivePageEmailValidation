@@ -2,22 +2,14 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-@media (min-width: 756px) {
+@media (min-width: 800px) {
     .bg_image {
         background: url('images/bg-pattern-desktop.svg');
         background-position: bottom left;
     }
-
-    .mobile_img, .header-mobile {
-        display: none;
-    }
 }
 
-@media (max-width: 755px) {
-    .pc_img, .header-pc {
-        display: none;
-    }
-
+@media (max-width: 800px) {
     .bg_image {
         background: linear-gradient(135deg, white, #fff5f5);
     }
